@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Youtube.com clone</title>
+    <style>
+      /*
+      ¿Cómo estilizar una imagen?
+      1. Si se quiere tener una imagen con un width y un height establecido, sin deformar la imagen podemos pasar la propiedad 
+      object-fit: cover.
+      esta propiedad puede cortar la imagen de modo que cumpla con la altura y anchura especificada sin tener que estirar la imagen. 
+      Pero podemos establecer que partes de la iamgen queremos ver con la propiedad object-position: left / right
+      Además de conver, también tenemos contain, que crea un contenedor del tamaño que hemos establecido pero ajusta la imagen para 
+      que esta conserve su tamaño original. Un comportamiento deribado de esto es que la imagen puede llegar a ser más pequeña que su contenedor, ante esta situación también podemos usar lap irpiedad object-position en caso de que querramos mover la imagen hacia arriba o abajo, o a los lados.
+      */
+
+      /* 
+      Display
+      La propiedad display puede tomar 3 valores
+        block: Toma toda la linea. Un ejemplo es el parrafo. si bien su contenido no ocupa toda la línea, se genera un espacio que se extiende hasta el final de la línea.
+        inline-block: solo toma el espacio que necesita. Una etiqueta que tiene esto por defecto es la imagen o el input. De modo que otros elementos pueden aparecer junto a él.
+        inline-element: aparecen dentro de la línea de texto. por ejemplo la propiedad de texto strong 
+
+        Los más importantes son los dos primeros pues determiann como los elementos se muestran en pantalla.
+      
+      */
+      .thumbnail {
+        width: 300px;
+        display: block;
+        /* height: 300px;
+        object-fit:cover;
+        object-position: right; */
+      }
+      .search-bar {
+      }
+      .video-author,
+      .video-stats {
+
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="Search" class="search-bar">
+    <img src="./assets/thumbnail-1.webp" class="thumbnail">
+    <p class="video-title">
+      Talking Tech and AI with Google CEO Sundar Pichai!</p>
+    <p class="video-author">Marques Brownlee</p>
+    <p class="video-stats">3.4M views &#183; 6 months ago</p>
+  </body>
+</html>
