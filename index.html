@@ -3,6 +3,12 @@
   <head>
     <title>Youtube.com clone</title>
     <style>
+      /* 
+      Text 
+
+      La propiedad para setear el espacio entre lineas de un mismo parrafo es line-height
+      
+      */
       /*
       ¿Cómo estilizar una imagen?
       1. Si se quiere tener una imagen con un width y un height establecido, sin deformar la imagen podemos pasar la propiedad 
@@ -23,27 +29,53 @@
         Los más importantes son los dos primeros pues determiann como los elementos se muestran en pantalla.
       
       */
+
+      /* 
+      lesson 9 - Div
+      Div : significa divisón
+      de forma simple podemos entenderlo como una caja
+      El div, como el parrafo es un block element.
+      La clave de los divs es quep pueden contener otros elementos dentro de sí. Están diseñados para ser contendores. 
+      los divs por defecto tienen un width de 100%
+      */
+
+      /* 
+      lesson 10 - NESTED LAYOURT TECHNIQUE
+      Hay dos tipos de layouts, verticales, uno encima de otro, o horizontal, donde están uno al lado del otro. combiando los dos, se puede
+      crear cualquier cosa que veamos en linea. 
+
+      */
       .thumbnail {
         width: 300px;
         display: block;
-        /* height: 300px;
-        object-fit:cover;
-        object-position: right; */
       }
-      .search-bar {
+      .search-bar{
+        display: block;
       }
-      .video-author,
-      .video-stats {
+      .video-preview {
+        width: 300px;
+        display: inline-block;
+        vertical-align: top; /* ya que el titulo de un video es mayor que el otro, los elementos pueden no quedar alineados, de modo que usamos esta propiedad para solucionarlo */
+        margin-right: 15px;
+      }
 
-      }
     </style>
   </head>
   <body>
     <input type="text" placeholder="Search" class="search-bar">
-    <img src="./assets/thumbnail-1.webp" class="thumbnail">
-    <p class="video-title">
-      Talking Tech and AI with Google CEO Sundar Pichai!</p>
-    <p class="video-author">Marques Brownlee</p>
-    <p class="video-stats">3.4M views &#183; 6 months ago</p>
+    <div class="video-preview"> 
+      <img src="./assets/thumbnail-1.webp" class="thumbnail">
+      <p class="video-title">
+        Talking Tech and AI with Google CEO Sundar Pichai!</p>
+      <p class="video-author">Marques Brownlee</p>
+      <p class="video-stats">3.4M views &#183; 6 months ago</p>
+    </div>
+    <div class="video-preview"> 
+      <img src="./assets/thumbnail-2.webp" class="thumbnail">
+      <p class="video-title">
+        Try Not To Laugh Challenge #9</p>
+      <p class="video-author">Markiplier</p>
+      <p class="video-stats">19M views &#183; 4 years ago</p>
+    </div>
   </body>
 </html>
